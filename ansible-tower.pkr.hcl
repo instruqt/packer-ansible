@@ -32,7 +32,7 @@ build {
             "sudo mv /tmp/license /etc/tower/license",
             "sudo dnf config-manager --add-repo https://releases.ansible.com/ansible-tower/cli/ansible-tower-cli-el8.repo",
             "sudo dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm",
-            "sudo dnf install -y ansible postgresql ansible-tower-cli",
+            "sudo dnf install -y ansible postgresql ansible-tower-cli jq",
             "cd /tmp",
             "curl -sLO https://releases.ansible.com/ansible-tower/setup-bundle/ansible-tower-setup-bundle-3.7.3-1.tar.gz",
             "tar xzf ansible-tower-setup-bundle-3.7.3-1.tar.gz",
