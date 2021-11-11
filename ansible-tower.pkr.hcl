@@ -28,6 +28,9 @@ build {
 
     provisioner "shell" {
         inline = [
+            "sudo dnf remove dnf-automatic -y",
+            "sudo dnf upgrade -y",
+            "sudo dnf install -y git curl vim",
             "sudo mkdir -p /etc/tower",
             "sudo mv /tmp/license /etc/tower/license",
             "sudo dnf config-manager --add-repo https://releases.ansible.com/ansible-tower/cli/ansible-tower-cli-el8.repo",

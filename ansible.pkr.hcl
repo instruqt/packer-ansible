@@ -18,6 +18,9 @@ build {
 
     provisioner "shell" {
         inline = [
+            "sudo dnf remove dnf-automatic -y",
+            "sudo dnf upgrade -y",
+            "sudo dnf install -y git curl vim",
             "sudo dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm",
             "sudo dnf install -y ansible",
         ]
